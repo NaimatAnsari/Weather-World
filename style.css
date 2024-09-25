@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card {
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 60px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background-color: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background-color: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.search button img {
+    width: 16px;
+}
+
+.weather-icon {
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.humidity,
+.wind {
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+/* Base styles are already applied in your code */
+
+/* For screens with a max width of 1200px */
+@media screen and (max-width: 1200px) {
+    .card {
+        max-width: 450px;
+    }
+
+    .weather h1 {
+        font-size: 60px;
+    }
+
+    .weather h2 {
+        font-size: 35px;
+    }
+
+    .humidity, .wind {
+        font-size: 24px;
+    }
+}
+
+/* For screens with a max width of 768px (tablets) */
+@media screen and (max-width: 768px) {
+    .card {
+        max-width: 400px;
+        padding: 30px 25px;
+    }
+
+    .search input {
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .search button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .weather h1 {
+        font-size: 50px;
+    }
+
+    .weather h2 {
+        font-size: 30px;
+    }
+
+    .humidity, .wind {
+        font-size: 22px;
+    }
+}
+
+/* For screens with a max width of 480px (mobiles) */
+@media screen and (max-width: 480px) {
+    .card {
+        max-width: 400px;
+        padding: 25px 20px;
+    }
+
+    .search input {
+        font-size: 12px;
+        padding: -2px 4px;
+        height: 45px;
+    }
+
+    .search button {
+        width: 45px;
+        height: 45px;
+    }
+
+    .weather h1 {
+        font-size: 40px;
+    }
+
+    .weather h2 {
+        font-size: 25px;
+    }
+
+    .humidity, .wind {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 250px) and (max-width: 350px) {
+    .card {
+        max-width: 250px;
+        padding: 20px 15px;
+    }
+
+    .search input {
+        font-size: 12px;
+        padding: 5px 10px;
+        height: 40px;
+    }
+
+    .search button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .weather h1 {
+        font-size: 30px;
+    }
+
+    .weather h2 {
+        font-size: 18px;
+    }
+
+    .humidity, .wind {
+        font-size: 14px;
+    }
+
+    .weather-icon {
+        width: 100px;
+    }
+}
+
+/* For screens between 250px and 350px */
+@media screen and (min-width: 250px) and (max-width: 350px) {
+    .card {
+        max-width: 275px;
+        padding: 16px 10px;
+    }
+
+    .search input {
+        font-size: 12px;
+        padding: 5px 10px;
+        height: 40px;
+        flex: 1;
+    }
+
+    .search button {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* General styling for the search bar */
+.search-container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    font-size: 16px;
+}
+
+.search-icon {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .search-container {
+        width: 80%;
+    }
+
+    input[type="text"] {
+        font-size: 14px;
+    }
+
+    .search-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 480px) {
+    .search-container {
+        width: 90%;
+        flex-direction: column;
+        padding: 8px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        /* margin-bottom: 10px; */
+        font-size: 12px;
+    }
+
+    .search-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
